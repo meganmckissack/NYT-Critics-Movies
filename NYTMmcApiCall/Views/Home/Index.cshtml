@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>NYT Critic's pick movies:</h1>
+
+<ul>
+@foreach (Movie movie in Model)
+{
+    <ul>
+        <li>Title: @movie.Display_Title</li>
+        <li>Rating: @movie.Mpaa_Rating</li>
+        <li>Headline: @movie.Headline</li>
+        <li>Summary: @movie.Summary_Short</li>
+    </ul>
+    <br>
+}
+</ul>
